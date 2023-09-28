@@ -1,13 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app=Flask("myapi")
+app=Flask("__name__")
 
-@app.route("http://127.0.0.1:5000/api/v1/<station>/<date>/")
+
+@app.route('/')
+def home():
+    return render_template("myapi.html")
+@app.route("/api/v1/<station>/<date>/")
 
 def hi(station, date):
-    data= pd.read_csv()
-    temperature= data.station(data)
-
+#   data= pd.read_csv()
+#   temperature= data.station(data)
+    tempertature = 23
     return {"station":station,
             "date":date,
-            "temperature":temperature}
+            "temperature":tempertature}
+
+if __name__ == "__main__":
+    app.run(debug=True)
