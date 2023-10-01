@@ -6,7 +6,11 @@
 </head>
 <body>
 <h1 style="color:blue;"> The Weather API </h1>
-<h3> URL format:"http://127.0.0.1:5000/api/v1/station/date/"</h3>
-<h3> URL example:"http://127.0.0.1:5000/api/v1/12/1955-10-21/"<h3>
+<h3> URL format for one station & one date:"http://127.0.0.1:5001/api/v1/station/date/" &emsp; <font color="red">Example:</font>"http://127.0.0.1:5000/api/v1/12/1955-10-21/"</h3>
+<h3> URL format for one station & all dates:"http://127.0.0.1:5001/api/v1/" &emsp;<font color="red">Example:</font> "http://127.0.0.1:5000/api/v1/10/"</h3>
+<h3> URL format for one station & one year:"http://127.0.0.1:5001/api/v1/" &emsp; <font color="red">Example:</font> "http://127.0.0.1:5000/api/v1/yearly/10/1986/" <h3>
+<h3> Example:<h3>
+<p> {{data|safe }} </p>
+<!--<img src="{{url_for('static', filename='mount-everest.jpg')}}", width='1200'>-->
 </body>
 </html>
